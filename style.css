@@ -1,0 +1,16 @@
+body,
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  margin: 0;
+  background-color: rgb(5, 5, 25);
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 3em;
+  color: white;
+}
