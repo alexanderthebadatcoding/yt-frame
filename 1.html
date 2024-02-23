@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>image 1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="next-size-adjust" />
+    <meta property="og:title" content="Watch Youtube Video" />
+    <meta property="fc:frame" content="vNext" />
+    <meta property="fc:frame:button:1" content="See Video" />
+    <meta property="fc:frame:button:1:action" content="link" />
+  </head>
+  <body>
+    <script src="videoID.js"></script>
+    <script>
+      imageUrl = "https://img.youtube.com/vi/" + videoId + "/hq1.jpg";
+      // Assuming you are working with the DOM in a browser environment
+      function createMetaTag(property, content) {
+        let metaTag = document.createElement("meta");
+        metaTag.setAttribute("property", property);
+        metaTag.setAttribute("content", content);
+        return metaTag;
+      }
+
+      // Create and append meta tags
+      document.head.appendChild(createMetaTag("og:image", imageUrl));
+      document.head.appendChild(createMetaTag("fc:frame:image", imageUrl));
+      // document.head.appendChild(createMetaTag("og:title", ogTitle));
+      document.head.appendChild(createMetaTag("og:url", ogUrl));
+      document.head.appendChild(
+        createMetaTag("fc:frame:button:1:target", ogUrl)
+      );
+
+      console.log(imageUrl, ogTitle, ogUrl);
+    </script>
+    <img src="${imageUrl}" alt="" />
+    <main></main>
+  </body>
+</html>
