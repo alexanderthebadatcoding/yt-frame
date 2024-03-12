@@ -10,10 +10,7 @@
     <meta property="fc:frame" content="vNext" />
     <meta property="fc:frame:button:1" content="See Video" />
     <meta property="fc:frame:button:1:action" content="link" />
-  </head>
-  <body>
-  <!--     <script src="videoID.js"></script> -->
-    <script>
+     <script>
       let imageURL;
       const vidIMG = sessionStorage.getItem('vidIMG');
       imageUrl = "https://img.youtube.com/vi/" + vidIMG + "/hq1.jpg";
@@ -37,9 +34,14 @@
       );
 
       console.log(imageUrl, ogTitle, ogUrl);
-      document.getElementById("headerImage").src = imageUrl;
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("headerImage").src = imageUrl;
+      });
     </script>
-    <img id="headerImage" alt="Canvas Image" />
+  </head>
+  <body>
+  <!--     <script src="videoID.js"></script> -->
+    <img id="headerImage" src="..." alt="Image 1">
     <main></main>
   </body>
 </html>
