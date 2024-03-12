@@ -17,6 +17,8 @@
       let imageURL;
       const vidIMG = sessionStorage.getItem('vidIMG');
       imageUrl = "https://img.youtube.com/vi/" + vidIMG + "/hq1.jpg";
+      let ogTitle = "Watch on Youtube";
+      let ogUrl = "https://www.youtube.com/watch?v=" + videoId;
       // Assuming you are working with the DOM in a browser environment
       function createMetaTag(property, content) {
         let metaTag = document.createElement("meta");
@@ -28,7 +30,7 @@
       // Create and append meta tags
       document.head.appendChild(createMetaTag("og:image", imageUrl));
       document.head.appendChild(createMetaTag("fc:frame:image", imageUrl));
-      // document.head.appendChild(createMetaTag("og:title", ogTitle));
+      document.head.appendChild(createMetaTag("og:title", ogTitle));
       document.head.appendChild(createMetaTag("og:url", ogUrl));
       document.head.appendChild(
         createMetaTag("fc:frame:button:1:target", ogUrl)
