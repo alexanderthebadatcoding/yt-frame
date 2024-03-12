@@ -53,6 +53,7 @@ function preloadImages(urls, callback) {
   let imagesArray = [];
   urls.forEach((url, index) => {
     const img = new Image();
+    img.crossOrigin = "anonymous";
     img.onload = () => {
       loadedImages++;
       if (loadedImages === urls.length) {
@@ -70,8 +71,8 @@ preloadImages(imageUrls, (images) => {
   const gif = new GIF({
     workers: 2,
     quality: 10,
-    width: images[0].width,
-    height: images[0].height,
+    width: 480,
+    height: 360,
   });
 
   // Add each image to the GIF
