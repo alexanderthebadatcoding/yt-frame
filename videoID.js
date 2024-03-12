@@ -4,6 +4,7 @@ let urlString;
 
 // Create a URL object
 let url = new URL(window.location.href);
+sessionStorage.setItem('urlInfo', url);
 // Use window.location.href as the base URL
 
 // Get the value of the 'v' parameter
