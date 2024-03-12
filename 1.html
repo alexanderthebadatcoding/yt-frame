@@ -14,6 +14,7 @@
   <body>
     <script src="videoID.js"></script>
     <script>
+      const vidIMG = sessionStorage.getItem('vidIMG');
       imageUrl = "https://img.youtube.com/vi/" + vidIMG + "/hq1.jpg";
       // Assuming you are working with the DOM in a browser environment
       function createMetaTag(property, content) {
